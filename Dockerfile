@@ -1,7 +1,7 @@
-FROM alpine:3.18.4
+FROM alpine:3.20.3
 
 ARG LIBRESPOT_VERSION=0.4.2-r4
-ARG SNAPCAST_VERSION=0.27.0
+ARG SNAPCAST_VERSION=0.29.0
 
 RUN echo "https://dl-cdn.alpinelinux.org/alpine/edge/testing/" >> /etc/apk/repositories
 RUN apk add --no-cache bash snapcast=${SNAPCAST_VERSION} librespot=${LIBRESPOT_VERSION} sed
