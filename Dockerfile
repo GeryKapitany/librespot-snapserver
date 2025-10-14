@@ -1,9 +1,9 @@
-FROM alpine:3.20.3
+FROM alpine:3.22
 
-ARG LIBRESPOT_VERSION=0.4.2-r4
-ARG SNAPCAST_VERSION=0.29.0
+ARG LIBRESPOT_VERSION=0.7.1-r0
+ARG SNAPCAST_VERSION=0.34.0-r0
 
-RUN echo "https://dl-cdn.alpinelinux.org/alpine/edge/testing/" >> /etc/apk/repositories
+RUN echo "https://dl-cdn.alpinelinux.org/alpine/edge/testing/" >> /etc/apk/repositories && echo "https://dl-cdn.alpinelinux.org/alpine/edge/community/" >> /etc/apk/repositories
 RUN apk add --no-cache bash snapcast=${SNAPCAST_VERSION} librespot=${LIBRESPOT_VERSION} sed
 
 COPY run.sh /
