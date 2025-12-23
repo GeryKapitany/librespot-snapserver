@@ -1,6 +1,6 @@
 FROM alpine:3.22
 
-ARG LIBRESPOT_VERSION=0.7.1-r0
+ARG LIBRESPOT_VERSION=0.8.0-r0
 ARG SNAPCAST_VERSION=0.34.0-r0
 
 RUN echo "https://dl-cdn.alpinelinux.org/alpine/edge/testing/" >> /etc/apk/repositories && echo "https://dl-cdn.alpinelinux.org/alpine/edge/community/" >> /etc/apk/repositories
